@@ -45,5 +45,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   asteroid: {fileID: 73677593691959669, guid: 29151bcf8964aeb4f842be4e8a7a8922, type: 3}
-  spawnRateMin: 1
-  spawnRateMax: 3
+  spawnRateMin: 3
+  spawnRateMax: 7
