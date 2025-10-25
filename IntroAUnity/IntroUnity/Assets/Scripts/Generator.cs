@@ -18,8 +18,8 @@ public class Generator : MonoBehaviour
     private void Update()
     {
         // Gradually decrease spawn rates to increase difficulty
-        spawnRateMin = Mathf.Max(0.5f, spawnRateMin - 1.2f * Time.deltaTime);
-        spawnRateMax = Mathf.Max(1f, spawnRateMax - 1.2f * Time.deltaTime);
+        spawnRateMin = Mathf.Max(0.2f, spawnRateMin - 1.5f * Time.deltaTime);
+        spawnRateMax = Mathf.Max(0.5f, spawnRateMax - 1.5f * Time.deltaTime);
     }
 
     void SpawnAsteroid()
