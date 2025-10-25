@@ -3,9 +3,10 @@ using UnityEngine;
 public class Asteroid : MonoBehaviour
 {
 
-    public float speed = 3f;
-    public float minSize = 0.5f;
-    public float maxSize = 1.5f;
+    public float speed = 3.2f;
+    public float rotationSpeed = 0.2f;
+    public float minSize = 0.7f;
+    public float maxSize = 2f;
 
 
     void Start()
@@ -18,8 +19,11 @@ public class Asteroid : MonoBehaviour
     
     void Update()
     {
-        // Downward movement
-        transform.Translate(Vector2.down * speed * Time.deltaTime);
+        // Downward movement, Space.World to avoid rotation affecting direction
+        transform.Translate(Vector2.down * speed * Time.deltaTime, Space.World);
+
+        // Slow rotation
+        transform.Rotate(0f, 0f, rotationSpeed * Time.deltaTime);
 
         // If it goes off screen, destroy it
         if (transform.position.y < -6f)
