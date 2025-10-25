@@ -38,7 +38,7 @@ public class Player : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.CompareTag("Collectible"))
+        if (other.CompareTag("Asteroid"))
         {
             Destroy(other.gameObject);
         }
