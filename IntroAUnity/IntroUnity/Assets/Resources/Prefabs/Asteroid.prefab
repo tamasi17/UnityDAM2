@@ -165,6 +165,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e782b984ae546d6469026d2951e6b71c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 2.2293732
-  minSize: 0.4
-  maxSize: 1.2
+  speed: 3.931262
+  rotationSpeed: 10
+  minSize: 0.7
+  maxSize: 1.7

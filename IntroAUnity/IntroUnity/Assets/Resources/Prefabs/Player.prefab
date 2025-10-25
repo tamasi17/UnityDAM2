@@ -28,7 +28,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0.7309667, y: -1.8390543, z: 0}
-  m_LocalScale: {x: 0.09, y: 0.09, z: 0.09}
+  m_LocalScale: {x: 0.07, y: 0.07, z: 0.07}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
@@ -100,8 +100,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2779f509084472849a02d9947fb33a8b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 5
-  score: {fileID: 0}
-  bullet: {fileID: 0}
+  speed: 7
+  bullet: {fileID: 2939810179998666790, guid: ba82b257d4e2087469881c2f28f4c548, type: 3}
   firePoint: {fileID: 0}
   fireRate: 0.3
