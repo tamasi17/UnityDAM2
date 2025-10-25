@@ -1,3 +1,4 @@
+using System.Collections;
 using TMPro;
 using UnityEngine;
 
@@ -56,9 +57,40 @@ public class GameManager : MonoBehaviour
     void GameOver()
     {
         Debug.Log("Game Over!");
-        if (gameOverPanel != null) gameOverPanel.SetActive(true);
-        Time.timeScale = 0; // freeze game
+
+        Destroy(GameObject.FindWithTag("Player"));
+
+        SpeedUpAsteroids();
         
+
+        // Show panel
+        if (gameOverPanel != null)
+        {
+            gameOverPanel.SetActive(true);
+        }
+
+
+        // Wait 0.5–1 sec before freezing
+        Invoke(nameof(FreezeGame), 4f);
+
+    }
+
+    // Make remaining asteroids go crazy fast
+    void SpeedUpAsteroids()
+    {
+        
+        // Asteroid array, GameObject.FindObjectsByType requires Unity 2023.1 or newer
+        Asteroid[] asteroids = GameObject.FindObjectsByType<Asteroid>(FindObjectsSortMode.None);
+
+        foreach (Asteroid a in asteroids)
+        {
+            a.speed *= 8f; // multiply current speed by 10
+        }
+    }
+
+    void FreezeGame()
+    {
+        Time.timeScale = 0f; // freeze
     }
 
 }

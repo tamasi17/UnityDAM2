@@ -3,11 +3,12 @@ using UnityEngine;
 public class Asteroid : MonoBehaviour
 {
 
-    public float speed = 3.2f;
+    public float speed = 3.4f;
     public float rotationSpeed = 0.2f;
     public float minSize = 0.7f;
     public float maxSize = 2f;
 
+    public GameObject explosionPrefab;
 
     void Start()
     {
@@ -42,6 +43,7 @@ public class Asteroid : MonoBehaviour
             GameManager.instance.AddScore(); // add score
             Destroy(other.gameObject); // bullet
             Destroy(gameObject);       // asteroid
+            Instantiate(explosionPrefab, transform.position, Quaternion.identity);
         }
 
         if (other.CompareTag("Player"))
