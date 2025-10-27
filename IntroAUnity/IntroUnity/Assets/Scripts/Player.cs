@@ -43,7 +43,15 @@ public class Player : MonoBehaviour
 
     void MovePlayer()
     {
+
+        // Clamp position only if not sliding in
+        if (!slidingIn)
+        {
+            ClampPosition();
+        
+
         float x = 0f, y = 0f;
+
 
         if (Input.GetKey(KeyCode.UpArrow) || Input.GetKey(KeyCode.W))
             y += 1;
@@ -57,13 +65,9 @@ public class Player : MonoBehaviour
         Vector2 move = new Vector2(x, y) * speed * Time.deltaTime;
         transform.Translate(move);
 
-       
-        // Clamp position only if not sliding in
-        if (!slidingIn)
-        {
-            ClampPosition();
         }
-            
+
+
     }
 
     void OnTriggerEnter2D(Collider2D other)
