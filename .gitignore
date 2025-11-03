@@ -4,8 +4,8 @@
 #
 .utmp/
 Library/
-/[Tt]emp/
-/[Oo]bj/
+Temp/
+obj/
 /[Bb]uild/
 /[Bb]uilds/
 Logs/
