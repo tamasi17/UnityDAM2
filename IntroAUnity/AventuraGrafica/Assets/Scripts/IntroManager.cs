@@ -14,12 +14,15 @@ public class IntroManager : MonoBehaviour
     [SerializeField] public TMP_Text status;
     [SerializeField] private TMP_InputField nameInput;
     [SerializeField] private TMP_Dropdown personalityDropdown;
+    public Button exitButton;
 
     private int doorCounter = 0;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        exitButton.onClick.AddListener(ExitGame);
+
         // Hide the door button at first
         doorButton.gameObject.SetActive(false);
         doorButtonText.text = "Oh. That door again.";
@@ -127,6 +130,13 @@ public class IntroManager : MonoBehaviour
 
         // return to normal
         doorButton.transform.localScale = originalScale;
+    }
+
+    public void ExitGame()
+    {
+        // Exit the application
+        Application.Quit();
+        Debug.Log("Game Exited");
     }
 
 }
