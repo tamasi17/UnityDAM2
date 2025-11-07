@@ -227,7 +227,7 @@ public class SliderPuzzleManager : MonoBehaviour
 
     private IEnumerator LoadNextSceneAfterDelay()
     {
-        yield return new WaitForSeconds(2f);
+        yield return new WaitForSeconds(1f);
 
         personality = GameData.Instance.playerPersonality;
         UnityEngine.Debug.Log("Loading scene for: " + personality);
@@ -238,11 +238,11 @@ public class SliderPuzzleManager : MonoBehaviour
         }
         else if (personality == "Gloomy")
         {
-            SceneManager.LoadScene("OptimisticEnding");
+            SceneManager.LoadScene("GloomyEnding");
         }
         else if (personality == "Detached")
         {
-            SceneManager.LoadScene("OptimisticEnding");
+            SceneManager.LoadScene("DetachedEnding");
         }
 
         

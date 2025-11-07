@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class EndingManager : MonoBehaviour
@@ -23,6 +24,6 @@ public class EndingManager : MonoBehaviour
     {
         // Load the credits scene
         Debug.Log("Loading credits");
-        UnityEngine.SceneManagement.SceneManager.LoadScene("Credits");
+        SceneManager.LoadScene("Credits");
     }
 }
