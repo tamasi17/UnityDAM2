@@ -7,16 +7,22 @@ using UnityEngine.UI;
 public class ButtonPuzzleManager : MonoBehaviour
 {
 
-    public Toggle optimisticToggle;
-    public Toggle gloomyToggle;
-    public Toggle detachedToggle;
+    public Toggle goodnessToggle;
+    public Toggle potentialToggle;
+    public Toggle dreamsToggle;
+    public Toggle weaknessToggle;
+    public Toggle mistakesToggle;
+    public Toggle fearsToggle;
+    public Toggle patternsToggle;
+    public Toggle habitsToggle;
+    public Toggle natureToggle;
 
     private bool correctAnswer = false;
 
     public Button nextDoor;
     public TMP_Text doorText;
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+
     void Start()
     {
         nextDoor.gameObject.SetActive(false);
@@ -24,9 +30,17 @@ public class ButtonPuzzleManager : MonoBehaviour
 
         Debug.Log("Personality: "+ GameData.Instance.playerPersonality);
 
-        optimisticToggle.onValueChanged.AddListener(delegate { AnswerIsCorrect(); });
-        gloomyToggle.onValueChanged.AddListener(delegate { AnswerIsCorrect(); });
-        detachedToggle.onValueChanged.AddListener(delegate { AnswerIsCorrect(); });
+        goodnessToggle.onValueChanged.AddListener(delegate { AnswerIsCorrect(); });
+        potentialToggle.onValueChanged.AddListener(delegate { AnswerIsCorrect(); });
+        dreamsToggle.onValueChanged.AddListener(delegate { AnswerIsCorrect(); });
+
+        weaknessToggle.onValueChanged.AddListener(delegate { AnswerIsCorrect(); });
+        mistakesToggle.onValueChanged.AddListener(delegate { AnswerIsCorrect(); });
+        fearsToggle.onValueChanged.AddListener(delegate { AnswerIsCorrect(); });
+        
+        patternsToggle.onValueChanged.AddListener(delegate { AnswerIsCorrect(); });
+        habitsToggle.onValueChanged.AddListener(delegate { AnswerIsCorrect(); });
+        natureToggle.onValueChanged.AddListener(delegate { AnswerIsCorrect(); });
 
         AnswerIsCorrect();
 
@@ -41,13 +55,13 @@ public class ButtonPuzzleManager : MonoBehaviour
         string playerPersonality = GameData.Instance.playerPersonality;
 
         Debug.Log("Checking personality and toggles: " + GameData.Instance.playerPersonality 
-            + "\n Optimistic answer: "+ optimisticToggle.isOn
-            + "\n Gloomy answer: " + gloomyToggle.isOn
-            + "\n Detached answer: " + detachedToggle.isOn);
+            + "\n Optimistic answer: "+ goodnessToggle.isOn
+            + "\n Gloomy answer: " + weaknessToggle.isOn
+            + "\n Detached answer: " + patternsToggle.isOn);
 
         if (playerPersonality == "Optimistic")
         {
-            if (optimisticToggle.isOn)
+            if (goodnessToggle.isOn && potentialToggle.isOn && dreamsToggle.isOn)
             {
                 correctAnswer = true;
                 PuzzleCompleted();
@@ -60,7 +74,7 @@ public class ButtonPuzzleManager : MonoBehaviour
         }
         else if (playerPersonality == "Gloomy")
         {
-            if (gloomyToggle.isOn)
+            if (weaknessToggle.isOn && mistakesToggle.isOn && fearsToggle.isOn)
             {
                 correctAnswer = true;
                 PuzzleCompleted();
@@ -74,7 +88,7 @@ public class ButtonPuzzleManager : MonoBehaviour
         }
         else if (playerPersonality == "Detached")
         {
-            if (detachedToggle.isOn)
+            if (patternsToggle.isOn && habitsToggle.isOn && natureToggle.isOn)
             {
                 correctAnswer = true;
                 PuzzleCompleted();
