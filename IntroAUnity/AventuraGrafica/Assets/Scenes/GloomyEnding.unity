@@ -361,8 +361,8 @@ PrefabInstance:
     - target: {fileID: 7725736987182947408, guid: 41e58223e15661d428740db14da6ff82, type: 3}
       propertyPath: m_text
       value: "I am finally out.\nI won today, but I\u2019ll lose in time.\nThat\u2019s
-        just how life is \u2014 cruel.\n\nWhen I saw the sunrise, I sighed.\nIt was
-        a perfect sun.\n\n"
+        just how life is - cruel.\n\nWhen I saw the sunrise, I sighed.\nIt was a
+        perfect sun.\n\n"
       objectReference: {fileID: 0}
     - target: {fileID: 7725736987182947408, guid: 41e58223e15661d428740db14da6ff82, type: 3}
       propertyPath: m_HorizontalAlignment
@@ -483,19 +483,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2063525849526526228, guid: 83a75a2d4cb065d4daef821c84cbf7b5, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0.5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2063525849526526228, guid: 83a75a2d4cb065d4daef821c84cbf7b5, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0.5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2063525849526526228, guid: 83a75a2d4cb065d4daef821c84cbf7b5, type: 3}
       propertyPath: m_AnchorMin.x
-      value: 0.5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2063525849526526228, guid: 83a75a2d4cb065d4daef821c84cbf7b5, type: 3}
       propertyPath: m_AnchorMin.y
-      value: 0.5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2063525849526526228, guid: 83a75a2d4cb065d4daef821c84cbf7b5, type: 3}
       propertyPath: m_SizeDelta.x
@@ -535,11 +535,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2063525849526526228, guid: 83a75a2d4cb065d4daef821c84cbf7b5, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: -60
       objectReference: {fileID: 0}
     - target: {fileID: 2063525849526526228, guid: 83a75a2d4cb065d4daef821c84cbf7b5, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -60
       objectReference: {fileID: 0}
     - target: {fileID: 2063525849526526228, guid: 83a75a2d4cb065d4daef821c84cbf7b5, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x

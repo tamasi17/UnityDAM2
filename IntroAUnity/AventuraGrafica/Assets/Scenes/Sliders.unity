@@ -2530,7 +2530,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7725736987182947408, guid: 41e58223e15661d428740db14da6ff82, type: 3}
       propertyPath: m_text
-      value: '- too fast.'
+      value: '- probably worse.'
       objectReference: {fileID: 0}
     - target: {fileID: 7725736987182947408, guid: 41e58223e15661d428740db14da6ff82, type: 3}
       propertyPath: m_fontSize

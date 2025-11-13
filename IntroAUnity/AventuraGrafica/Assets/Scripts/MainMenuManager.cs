@@ -12,6 +12,7 @@ public class MainMenuManager : MonoBehaviour
     public TMP_Text introText;
     public Button startButton;
     public Button exitButton;
+    public Button againButton;
 
 
     void Start()
@@ -22,6 +23,7 @@ public class MainMenuManager : MonoBehaviour
         // Assign button listeners
         startButton.onClick.AddListener(StartGame);
         exitButton.onClick.AddListener(ExitGame);
+        againButton.onClick.AddListener(PlayAgain);
     }
 
     public void StartGame()
@@ -41,7 +43,7 @@ public class MainMenuManager : MonoBehaviour
 
     private IEnumerator LoadNextSceneAfterDelay()
     {
-        yield return new WaitForSeconds(5f);
+        yield return new WaitForSeconds(7f);
         SceneManager.LoadScene("Intro");
     }
 
@@ -50,5 +52,12 @@ public class MainMenuManager : MonoBehaviour
         // Exit the application
         Application.Quit();
         Debug.Log("Game Exited");
+    }
+
+    public void PlayAgain()
+    {
+        // Play again the game from the beginning
+        SceneManager.LoadScene("MenuPrincipal");
+        Debug.Log("Jugamos otra vez!");
     }
 }

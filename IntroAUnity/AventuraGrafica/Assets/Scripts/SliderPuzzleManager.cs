@@ -82,7 +82,7 @@ public class SliderPuzzleManager : MonoBehaviour
 
         UnityEngine.Debug.Log($"Slider values: {valueOne}, {valueTwo}, {valueThree}");
 
-        if (valueOne == 1 && valueTwo == 1 && valueThree == 1)
+        if (valueOne == 1 && valueTwo == 2 && valueThree == 1)
         {
             UnityEngine.Debug.Log("All optimistic answers correct.");
             allCorrect = true;
@@ -104,7 +104,7 @@ public class SliderPuzzleManager : MonoBehaviour
 
         UnityEngine.Debug.Log($"Slider values: {valueOne}, {valueTwo}, {valueThree}");
 
-        if (valueOne == 2 && valueTwo == 2 && valueThree == 2)
+        if (valueOne == 2 && valueTwo == 1 && valueThree == 2)
         {
             UnityEngine.Debug.Log("All gloomy answers correct.");
             allCorrect = true;
@@ -177,9 +177,9 @@ public class SliderPuzzleManager : MonoBehaviour
     public void SetAnswerTwo()
     {
         if (sliderTwo != null && sliderTwo.value == 1)
-            answerTwo.text = "- something wonderful!";
-        if (sliderTwo != null && sliderTwo.value == 2)
             answerTwo.text = "- probably worse.";
+        if (sliderTwo != null && sliderTwo.value == 2)
+            answerTwo.text = "- something wonderful!";
         if (sliderTwo != null && sliderTwo.value == 3)
             answerTwo.text = "- but who cares?";
     }

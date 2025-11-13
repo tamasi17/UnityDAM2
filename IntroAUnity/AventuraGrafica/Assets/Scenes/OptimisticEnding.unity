@@ -859,7 +859,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7198459240963199574, guid: 83a75a2d4cb065d4daef821c84cbf7b5, type: 3}
       propertyPath: m_Name
-      value: Credits
+      value: Credits (Button)
       objectReference: {fileID: 0}
     - target: {fileID: 7394539974273140573, guid: 83a75a2d4cb065d4daef821c84cbf7b5, type: 3}
       propertyPath: m_AnchorMax.x
